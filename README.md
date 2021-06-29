@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# dailydrinks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+At 17 Media, we love handmade drinks. Sometimes we just go out and buy from the store nearby, sometimes we order ourselves by filling out a form and call for delivery.
 
-## Available Scripts
+Please build an web app named `dailydrinks` which has the following features.
 
-In the project directory, you can run:
+- [ ] Homepage is a list to list all the `orders`
+- [ ] Each `order` contains the following fields:
+  1. A single-line text of it's `name`
+  2. The number `price` of the order
+  3. A multi-line **optional** text to specify additional `notes`
+- [ ] One can **add** a new order to the list by filling out a form somewhere in your app
+- [ ] One can **delete** any order in the list
+- [ ] One can also **edit** any order in the list
 
-### `yarn start`
+## Notes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. You can use any JavaScript framework (or plain vanilla JavaScript) you like, feel free to choose whatever you are most familiar with. But since we mostly use **React** at work, prefer using it if you are confident with it.
+2. Starter-kit like `create-react-app` or `vue-cli` are allowed and actually encouraged, we don't want to waste any of your precious time setting up environment.
+3. Please avoid using CSS frameworks too heavily, we want to see how you build your app from scratch, and how your CSS skills are. However for some cases it's reasonable to style a portion of your app with pre-defined style. Inevitably, we will be somewhat subjective about this, but you are more than welcome to discuss the thoughts behind the choice you make.
+4. You are free to use any npm packages out there you like, but just like CSS frameworks, only use them when it makes sense and use them with caution. Again, we are going to be somewhat subjective, welcome to describe your intention.
+5. The style and any additional features or details not specified in the above requirements are completely free to play with. You don't have to make the UI very beautiful but at least it should be well-organized.
+6. Your app normally will be run entirely on desktop, but if your app supports RWD, you should mention it in README.
+7. Pay attention to basic accessibility and user experience, make your app easy to use for normal users.
+8. Make sure your app runs in the last 2 versions of Chrome, Firefox, and macOS Safari.
+9. The app should be fully functional without any back-end server or database, you can just store your state in memory.
+10. Keep your source code clean, organized and modularized, we will be reviewing them.
+11. Testing are bonus and are not required.
+12. Keep security, performance, maintainability, and scalability in mind, develop your app as a minimal product, think about what users want. We will be working a lot with product team, attention to detail can help us work smoother.
+13. You don't have to make your app super complete or fully-featured. The time we estimiated is 2 hours, you can spend more or less, but please don't spend too much time on it, it will only be a reference for the next phase of the interview process.
+14. Upload your app to (Or just code entirely on) [CodeSandbox](https://codesandbox.io) when done, make sure your app behaves normally in the preview too. Alternatively if your app for some reason cannot run on it, you can push your app to [GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org). Please make sure to set up permission setting to let us view your project.
+15. Create a file under the root directory called `README.md`, briefly describe your application and, if you've implemented any additional features, a detailed but simple description about how to use them. Documenting is also a very important skill we value.
+16. Send us back an email along with the link of your application via reply. Once you've submitted the code, please don't update it afterwards. If for some reason the app breaks because of it, we won't be able to identify the cause.
