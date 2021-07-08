@@ -1,72 +1,64 @@
 import * as React from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import { List, ListItem } from '@material-ui/core';
+import {Fab, Grid, List } from '@material-ui/core';
+import AddIcon from '@material-ui/icons/Add';
 import OrderCard, { OrderItem } from '../components/homepageComponents/orderCard';
-import { Autorenew, StoreMallDirectorySharp } from '@material-ui/icons';
+import { ButtonLink } from '../styles/routingStyles';
 
-// TODO Learn how to use styles to center the stuff
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
-      maxWidth: 752,
+     flexGrow: 1
     },
-    demo: {
-      backgroundColor: theme.palette.background.paper,
+    orderList: {
+        textAlign: "center"
     },
     title: {
-      margin: theme.spacing(4, 0, 2),
+      textAlign: "center"
     },
+    fab: {
+        position: 'absolute',
+        bottom: theme.spacing(2),
+        right: theme.spacing(2),
+      },
   }),
 );
 
-const orders: OrderItem[] = [
-    {
-        id:1,
-        name: "Test",
-        price: 30.56,
-        notes: "This is notes",
-    },
-    {
-        id:2,
-        name: "Test 2",
-        price: 30.56,
-        notes: "This is notes",
-    },
-    {
-        id:3,
-        name: "Test 3",
-        price: 30.56,
-        notes: "This is notes",
-    },
-    {
-        id:4,
-        name: "Test 4",
-        price: 30.56,
-        notes: "This is notes",
-    }
-]
+interface IHomePageProps{
+    items:OrderItem[],
+    onEdit: (id:number ) => void,
+    onNew: () => void,
+    onDelete: (id: number) => void
+  }
 
-
-export interface HomePageProps {
-    
-}
 
 
 // Show all orders and can add edit and delete orders
 // List as cards and you can select to delete order from button in the card
 // This should be a class to be able to save the state
-export default function HomePage() {
+const HomePage : React.FC<IHomePageProps> = (props) => {
+   
+    // TODO When press on button reset the props
    const classes = useStyles();
-
        return (
         <div className={classes.root}>
-            <h1>Your Orders</h1>
-            <div className={classes.demo}>
-            <List>
-                {orders.map((item)=> <OrderCard orderitem={item}/>)}
-            </List>
-            </div>
+            <Grid container wrap="nowrap" direction="column" justify="center">
+                <Grid item>
+                    <h1 className={classes.title}>Your Orders</h1>
+                </Grid>
+                <Grid item>
+                    <List className={classes.orderList}>
+                        {props.items.map((item)=> <OrderCard key={item.id} orderitem={item} onEdit={props.onEdit} onDelete={props.onDelete}/>)}
+                    </List>
+                </Grid>
+            </Grid>
+            <ButtonLink to="/new">
+                <Fab color="primary" aria-label="add" className={classes.fab} onClick={props.onNew}>
+                    <AddIcon />
+                </Fab>
+            </ButtonLink>
         </div>
         );
 }
+
+export default HomePage;
